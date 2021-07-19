@@ -10,16 +10,6 @@ Students will use IntelliJ IDEA and Android Studio to create Java applications. 
 
 The course focuses on fundamental computer science concepts like object-oriented programming, advanced data structures and algorithms, Big O asymptotic analysis, and the structure of statically typed languages.
 
-## Schedule example
-
-|Time   | Monday  | Tuesday |Wednesday|Thursday |Friday|
-|-------|---------|---------|---------|---------|--------|
-|9am-12:30pm|Lecture 1|Lecture 2|Lecture 3|Lecture 4|Lecture 5|
-|12:30pm-1:30pm|Lunch    | Lunch   | Lunch   |Lunch    |Lunch    |
-|1:30pm-2:30pm|DS&A 1   |DS&A 2   |DS&A 3   |DS&A 4   |DS&A 5   |
-|2:30pm - 6pm| Lab 1 | Lab 2 journal 1| Lab 2, journal 2|Lab 3, journal 3|Lab 4, journal 4|
-|after 6pm|Finish DS&A, readings for Lecture 2|Finish DS&A, readings for Lecture 3|Finish DS&A, readings for Lecture 4|Finish DS&A, readings for Lecture 5|Finish DS&A over weekend, readings for lecture 6|
-
 ## Assignments, Deadlines, Late Work, and other fun things
 
 There are several types of assignments that are required for this course, and they have different policies on late work.
