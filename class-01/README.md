@@ -31,3 +31,7 @@ Welcome to Day 1 of Code 401: Java! We're excited to have you here. Today's focu
 1. Write down the things that feel the most different between JavaScript and Java based on your experience with the prework.
 2. What data types do we have in Java?
 3. What happens when we write bad code in JavaScript? What about in Java?
+
+## Extra resources
+1. https://www.geeksforgeeks.org/differences-jdk-jre-jvm/
+2. https://docs.oracle.com/javase/8/docs/index.html
