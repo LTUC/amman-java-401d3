@@ -99,3 +99,7 @@ public static void main(String[] args) {
 - the constructor is weird
 - still have to declare the type of elements inside
 - still only one data type
+
+### Extra resources: 
+1- https://www.geeksforgeeks.org/difference-between-an-integer-and-int-in-java/
+2- https://www.w3schools.com/java/java_type_casting.asp
