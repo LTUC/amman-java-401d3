@@ -4,7 +4,7 @@
 package MyFirstPro;
 
 public class App {
-    
+
     int age = 22;
     double height = 170.5;
     float weight;
