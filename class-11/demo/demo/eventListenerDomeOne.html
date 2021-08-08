@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id="myBtn">Try Me!</button>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.getElementById('myBtn');
+    x.addEventListener('click', eventClicked);
+    x.addEventListener('mouseover', secondFunction);
+
+    function eventClicked() {
+        alert('button Clicked');
+    }
+
+    function secondFunction()  {
+        alert('second function');
+
+    }
+</script>
+
+</body>
+</html>
