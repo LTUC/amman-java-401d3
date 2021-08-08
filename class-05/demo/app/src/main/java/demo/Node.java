@@ -1,10 +1,10 @@
 package demo;
 
-public class Node {
-    public int value;       // generic types
+public class Node<T> {   //Type
+    public T value;       // generic types
     Node next;
 
-    public Node(int value){
+    public Node(T value){
         this.value = value;
     }
 

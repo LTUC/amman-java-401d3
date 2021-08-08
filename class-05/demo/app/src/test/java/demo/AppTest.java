@@ -11,4 +11,27 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
+    @Test
+    public void testAddingToLinkedList(){
+        LinkedList linkedList = new LinkedList<Integer>();
+
+
+        try{
+            linkedList.delete();
+        } catch (Exception e){
+            assertEquals("This is the message", e.getMessage());
+        }
+
+        // adding to an empty linkedList
+        linkedList.add(1);
+        // assert length is equal to 1
+        assertTrue(linkedList.getLength() == 1);
+        // assert than adding, is adding to the end of the linkedList
+        // toString and match strings
+        // adding to a non-empty linkedList
+        linkedList.add(2);
+        assertTrue(linkedList.getLength() == 2);
+        assertEquals("The add function is adding last", "1 -> 2 -> null",linkedList.toString());
+    }
 }

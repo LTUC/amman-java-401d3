@@ -11,10 +11,10 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
-        LinkedList ll = new LinkedList();
-        ll.add(5);
-        ll.add(1);
-        ll.insert(4);
+        LinkedList<String> ll = new LinkedList<>();
+        ll.add("a");
+        ll.add("b");
+        ll.insert("c");
 
         Node current = ll.head;
 

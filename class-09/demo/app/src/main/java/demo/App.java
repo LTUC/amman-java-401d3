@@ -23,34 +23,61 @@ public class App {
         // 1- create a url object - to open a connection
         try {
             URL url = new URL(apiuRL);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            getContentFromURL(url);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String getContentFromURL (URL url){
+        HttpURLConnection connection = null;
+        String content = null;
+        try {
+            connection  = connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
             int status = connection.getResponseCode();
-
             if(status == 200){
-                InputStream inputStream = connection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String line = bufferedReader.readLine();
-                while(line != null){
-                    // building a string   s = s+buffreedReader.readLine();   StringBuilder
-                    System.out.println(line);
-                    line = bufferedReader.readLine();
-                }
+                BufferedReader bufferedReader = getBufferedReader(connection);
+                content = getContentFromBufferedReader(bufferedReader);
                 bufferedReader.close();
             } else{
                 System.out.println("An error occurred with status "+status);
             }
-
-            connection.disconnect();
-
-        } catch (MalformedURLException e) {
+        } catch (IOException e) {
             e.printStackTrace();
-        } catch (IOException e){
-            e.printStackTrace();
+        } finally {
+            if(connection != null) {
+                connection.disconnect();
+            }
         }
 
+        return content;
 
     }
+
+    private static BufferedReader getBufferedReader(HttpURLConnection connection) throws IOException {
+        InputStream inputStream = connection.getInputStream();
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        return bufferedReader;
+    }
+
+    // getContent from BufferedReader
+    // return a string
+    private static String getContentFromBufferedReader(BufferedReader bufferedReader){
+        StringBuilder builder = new StringBuilder();
+        String line = null;
+        try {
+            line = bufferedReader.readLine();
+            while(line != null){
+                builder.append(line);
+                line = bufferedReader.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return  builder.toString();
+    }
+
 }
