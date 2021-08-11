@@ -1,14 +1,25 @@
 package com.groupname.demo;
+import javax.persistence.*;
 
+@Entity
+// default table name will match class name
+// @Table(name = "tableName")
 public class Book {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String author;
     private String title;
+    @ManyToOne
+    private Author bookAuthor;
 
-    public Book(int id, String author, String title) {
-        this.id = id;
-        this.author = author;
+    public Book(){
+
+    }
+
+    public Book(Author author, String title) {
+        this.bookAuthor = author;
         this.title = title;
     }
 
@@ -34,5 +45,13 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Author getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public void setBookAuthor(Author bookAuthor) {
+        this.bookAuthor = bookAuthor;
     }
 }
