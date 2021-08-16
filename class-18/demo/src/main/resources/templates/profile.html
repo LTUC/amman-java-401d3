@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcomme to <span th:text = "${requireduser.username}"></span>'s Profile</h1>
+
+<form th:if="${isLoggedInUserPofile == true}" action="">
+    <p>This is a form that is only visible when I access my own profile ... </p>
+</form>
+
+</body>
+</html>
