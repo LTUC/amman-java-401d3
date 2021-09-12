@@ -1,0 +1,175 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateStudent(
+  $input: CreateStudentInput!
+  $condition: ModelStudentConditionInput
+) {
+  createStudent(input: $input, condition: $condition) {
+    id
+    name
+    schoolyear
+    majorId
+    major {
+      id
+      name
+      students {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateStudent(
+  $input: UpdateStudentInput!
+  $condition: ModelStudentConditionInput
+) {
+  updateStudent(input: $input, condition: $condition) {
+    id
+    name
+    schoolyear
+    majorId
+    major {
+      id
+      name
+      students {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteStudent(
+  $input: DeleteStudentInput!
+  $condition: ModelStudentConditionInput
+) {
+  deleteStudent(input: $input, condition: $condition) {
+    id
+    name
+    schoolyear
+    majorId
+    major {
+      id
+      name
+      students {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateMajor(
+  $input: CreateMajorInput!
+  $condition: ModelMajorConditionInput
+) {
+  createMajor(input: $input, condition: $condition) {
+    id
+    name
+    students {
+      items {
+        id
+        name
+        schoolyear
+        majorId
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateMajor(
+  $input: UpdateMajorInput!
+  $condition: ModelMajorConditionInput
+) {
+  updateMajor(input: $input, condition: $condition) {
+    id
+    name
+    students {
+      items {
+        id
+        name
+        schoolyear
+        majorId
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteMajor(
+  $input: DeleteMajorInput!
+  $condition: ModelMajorConditionInput
+) {
+  deleteMajor(input: $input, condition: $condition) {
+    id
+    name
+    students {
+      items {
+        id
+        name
+        schoolyear
+        majorId
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}

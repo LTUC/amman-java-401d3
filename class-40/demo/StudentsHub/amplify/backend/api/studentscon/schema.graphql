@@ -1,0 +1,13 @@
+type Student @model @key(name:"byMajor", fields: ["majorId", "name"]) {
+  id: ID!
+  name: String!
+  schoolyear: Int
+  majorId: ID!
+  major: Major @connection(fields:["majorId"])
+}
+
+type Major @model {
+    id: ID!
+    name: String!
+    students: [Student] @connection(keyName: "byMajor", fields:["id"])
+}
