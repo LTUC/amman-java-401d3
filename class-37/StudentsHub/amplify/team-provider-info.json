@@ -1,0 +1,40 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-studentshub-dev-163602-authRole",
+            "UnauthRoleArn": "arn:aws:iam::250454630832:role/amplify-studentshub-dev-163602-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::250454630832:role/amplify-studentshub-dev-163602-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-studentshub-dev-163602-deployment",
+            "UnauthRoleName": "amplify-studentshub-dev-163602-unauthRole",
+            "StackName": "amplify-studentshub-dev-163602",
+            "StackId": "arn:aws:cloudformation:us-east-1:250454630832:stack/amplify-studentshub-dev-163602/0e7fa2e0-0d85-11ec-bb55-0ac97ebd7097",
+            "AmplifyAppId": "d15rlblfmpnj2g"
+        }
+    },
+    "studenthub": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-studentshub-studenthub-165151-authRole",
+            "UnauthRoleArn": "arn:aws:iam::250454630832:role/amplify-studentshub-studenthub-165151-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::250454630832:role/amplify-studentshub-studenthub-165151-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-studentshub-studenthub-165151-deployment",
+            "UnauthRoleName": "amplify-studentshub-studenthub-165151-unauthRole",
+            "StackName": "amplify-studentshub-studenthub-165151",
+            "StackId": "arn:aws:cloudformation:us-east-1:250454630832:stack/amplify-studentshub-studenthub-165151/42b384d0-0d87-11ec-87a1-12b95c73a183",
+            "AmplifyAppId": "d15rlblfmpnj2g"
+        },
+        "categories": {
+            "auth": {
+                "studentshubee53303c": {}
+            },
+            "notifications": {
+                "Pinpoint": {
+                    "Name": "StudentHubNot-studenthub",
+                    "Id": "1fbb0ffc764b4131ab6df1a749bbcc2a",
+                    "Region": "us-east-1"
+                }
+            }
+        }
+    }
+}

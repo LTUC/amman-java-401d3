@@ -1,0 +1,17 @@
+type Student @model {
+  id: ID!
+  studentname: String!
+  schoolyear: Int
+  studentMajor: Major @connection(name: "majorStudents")
+}
+
+type Major @model {
+    id: ID!
+    majorName: String!
+    students: [Student] @connection(name: "majorStudents")
+}
+
+type Test @model {
+    id: ID!
+    name: String
+}
